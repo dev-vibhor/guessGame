@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to display a random number between 1000 and 9999.</p>
+
+<button onclick="myFunction()">generate</button>
+<p id="tmr"></p>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  var max = 1000;
+  var min = 9999;
+  x.innerHTML =Math.floor(Math.random() * (max - min + 1)) + min;
+  localStorage.setItem("firstname", x.innerHTML);
+  document.getElementById("tmr").innerHTML = "5->4->3->2->1->Goooo....";
+  window.setTimeout(function(){window.location.href = "correct.html"},5000);
+}
+</script>
+
+</body>
+</html>
